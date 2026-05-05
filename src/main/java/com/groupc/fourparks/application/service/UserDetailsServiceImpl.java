@@ -84,11 +84,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         String password = passwordGeneratorImpl.generateRandomPassword();
-        try {
-            emailServiceImpl.sendEmailNewUser(new EmailDto(email, "Nueva contraseña", password));
-        } catch (MessagingException e) {
-            throw new InternalServerErrorException("Error al enviar email");
-        }
 
         userToCreate.setPassword(passwordEncoder.encode(password));
         userToCreate.setCreatedAt(LocalDate.now());
@@ -127,6 +122,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         var userDto = userDtoMapper.toDto(userCreated);
         userDto.setRoleList(userToCreate.getRoleList());
+
+        try {
+            emailServiceImpl.sendEmailNewUser(new EmailDto(email, "Nueva contraseña", password));
+        } catch (MessagingException e) {
+            throw new InternalServerErrorException("Error al enviar email");
+        }
+        
         return userDto;
     }
 

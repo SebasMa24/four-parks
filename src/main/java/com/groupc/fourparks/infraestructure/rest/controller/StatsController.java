@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/stats")
-// @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://fourparks.vercel.app/")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "https://fourparks.vercel.app/")
 public class StatsController {
 
     private final AuditoryService auditoryService;

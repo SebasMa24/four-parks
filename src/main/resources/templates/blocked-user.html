@@ -11,7 +11,10 @@
     <p>Hola Gerente,</p>
     <p>Queremos informarte que el siguiente usuario ha sido bloqueado por el sistema:</p>
     <p>Nombre de Usuario: <strong th:text="${body}"></strong></p>
-    <p>Por favor, ingrese al link si desea desbloquear al usuario.</p> <strong>https://fourparks.vercel.app/auth/unlock</strong></p>
+    <p>
+        Puedes restablecer tu acceso aquí:
+        <a th:href="${url}" th:text="${url}"></a>
+    </p>
     <p>Gracias por tu atención.</p>
     <p>El equipo de FourParks</p>
 </div>

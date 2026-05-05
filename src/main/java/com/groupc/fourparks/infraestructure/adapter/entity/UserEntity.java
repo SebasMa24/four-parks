@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
@@ -42,10 +42,10 @@ public class UserEntity {
     @Column(name = "second_lastname")
     private String secondLastname;
 
-    @Column(name = "account_active", columnDefinition = "integer default 1")
+    @Column(name = "account_active", columnDefinition = "boolean default true")
     private Boolean accountActive;
 
-    @Column(name = "account_blocked", columnDefinition = "integer default 0")
+    @Column(name = "account_blocked", columnDefinition = "boolean default false")
     private Boolean accountBlocked;
 
     @Column(name = "login_attempts", columnDefinition = "integer default 0")

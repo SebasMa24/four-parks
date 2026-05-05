@@ -13,8 +13,8 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/reservations")
-// @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://fourparks.vercel.app/")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "https://fourparks.vercel.app/")
 public class ReservationController {
 
     private final ReservationServiceImpl reservationService;

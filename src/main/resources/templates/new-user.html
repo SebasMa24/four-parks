@@ -11,7 +11,10 @@
     <p>¡Hola!</p>
     <p>Te damos la bienvenida a FourParks. Hemos creado una nueva cuenta para ti.</p>
     <p>Tu nueva contraseña es: <strong th:text="${body}"></strong></p>
-    <p>Por favor, inicia sesión con tu dirección de correo electrónico y esta nueva contraseña. <strong>https://fourparks.vercel.app/auth/new-password</strong>
+    <p>
+        Por favor, inicia sesión con tu dirección de correo electrónico y esta nueva contraseña.
+        <a th:href="${url}" th:text="${url}"></a>
+    </p>
     <p>Gracias por unirte a nosotros.</p>
     <p>El Equipo de FourParks</p>
 </div>

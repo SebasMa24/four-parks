@@ -16,8 +16,8 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/users")
-// @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://fourparks.vercel.app/")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "https://fourparks.vercel.app/")
 public class ManagerController {
 
     private final ManagerService managerService;

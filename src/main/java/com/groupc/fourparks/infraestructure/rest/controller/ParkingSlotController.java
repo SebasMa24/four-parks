@@ -22,8 +22,8 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/slots")
-// @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://fourparks.vercel.app/")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "https://fourparks.vercel.app/")
 public class ParkingSlotController {
     private final ParkingSlotServiceImpl parkingSlotServiceImpl;
 
