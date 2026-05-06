@@ -61,7 +61,7 @@ INSERT INTO users (email, password, first_name, second_name, first_lastname, sec
 INSERT INTO user_role (user_id, role_id) VALUES
 (1,1),
 (2,2),(3,2),(4,2),(5,2),(6,2),
-(3,3);
+(7,3);
 
 -- =========================
 -- TARJETAS
